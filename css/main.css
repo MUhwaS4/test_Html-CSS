@@ -1265,6 +1265,10 @@ footer .copyright {
     font-size: 17px;
   }
 
+  .work .port_main .port_info {
+    width: 100%;
+  }
+
   .work .port_main .port_info .port_top .port_img {
     width: 95%;
   }
