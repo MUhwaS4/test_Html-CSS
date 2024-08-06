@@ -47,7 +47,7 @@ body {
   background-color: rgb(255, 255, 245);
   overflow-x: hidden;
   width: 100%;
-  min-width: 1000px;
+  /* min-width: 1000px; */
 }
 
 /* 영문 적용 폰트 */
@@ -424,6 +424,7 @@ section.visual {
   text-indent: 8px;
   position: relative;
   margin: 0px 30px;
+  text-align: justify;
 }
 
 .about .my_how .int_text span {
@@ -491,12 +492,14 @@ section.visual {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
+  flex-wrap: wrap;
 }
 
 .skill .skill_list > li {
   opacity: 0;
   transition: 1s;
   transform: translateY(100px);
+  padding: 0px 30px 60px;
 }
 
 .skill.show .skill_list > li {
@@ -508,27 +511,27 @@ section.visual {
   margin-top: 60px;
 }
 
-.skill .skill_list:first-child > li:nth-child(1) {
+.skill .skill_list > li:nth-child(1) {
   transition-delay: 0.2s;
 }
 
-.skill .skill_list:first-child > li:nth-child(2) {
+.skill .skill_list > li:nth-child(2) {
   transition-delay: 0.4s;
 }
 
-.skill .skill_list:first-child > li:nth-child(3) {
+.skill .skill_list > li:nth-child(3) {
   transition-delay: 0.6s;
 }
 
-.skill .skill_list:last-child > li:nth-child(1) {
+.skill .skill_list > li:nth-child(4) {
   transition-delay: 0.8s;
 }
 
-.skill .skill_list:last-child > li:nth-child(2) {
+.skill .skill_list > li:nth-child(5) {
   transition-delay: 1.2s;
 }
 
-.skill .skill_list:last-child > li:nth-child(3) {
+.skill .skill_list > li:nth-child(6) {
   transition-delay: 1.4s;
 }
 
@@ -621,6 +624,10 @@ section.visual {
   position: relative;
   display: flex;
   flex-direction: column;
+}
+
+.work .port_main .port_info .port_top .port_text_sub > span {
+  display: none;
 }
 
 .work .port_main .port_info .port_top .port_text .port_text_head {
@@ -1018,4 +1025,328 @@ footer .copyright {
 
 .material-symbols-outlined {
   display: block;
+}
+
+/* 반응형 */
+@media screen and (max-width: 1023px) {
+
+  /* 태블릿에서는 화면의 80%만 차지하도록 */
+  .center {
+    width: 80%;
+  }
+
+  .visual video {
+    height: 700px;
+  }
+
+  .visual .video-gra {
+    top: 500px;
+  }
+
+  .center.logo-center {
+    width: 100%;
+  }
+
+  header .btn-hamburger {
+    display: block;
+  }
+
+  .about .about_warpper {
+    align-items: center;
+  }
+
+  .about .about_warpper .about_img {
+    width: 40%;
+  }
+
+  .about .about_warpper .about_text {
+    padding-top: 0px;
+  }
+
+  .about .about_warpper .about_text .slogan {
+    font-size: 30px;
+    padding-left: 5px;
+    padding-bottom: 25px;
+  }
+
+  .about .about_warpper .about_text div:nth-child(3) {
+    flex-direction: column;
+    align-items: start;
+    padding-bottom: 20px;
+  }
+
+  .about .about_warpper .about_text h3.name {
+    font-size: 22px;
+  }
+
+  .about .about_warpper .about_text h2 {
+    font-size: 14px;
+  }
+
+  .about .about_warpper .about_text .ab-ed h4 {
+    font-size: 14px;
+  }
+
+  .about_text .ab-ed table tr .ab-date {
+    display: none;
+  }
+
+  .about .about_warpper .about_text .btn-info {
+    top: 0px
+  }
+
+  .about .about_warpper .about_text .btn-info > img {
+    width: 110px;
+  }
+
+  .arrow_box {
+    right: 5px;
+  }
+
+  .about .my_how .int_text {
+    font-size: 15px;
+  }
+
+  .skill .center {
+    width: 80%;
+  }
+
+  #modal-about .modal_center {
+    width: auto;
+    height: 550px;
+  }
+
+  .certificate {
+    min-width: 330px;
+  }
+
+  .certificate .cert .cert_visual > video {
+    width: 73%;
+  }
+
+  .certificate .cert:first-child {
+    height: 160px;
+  }
+
+  .certificate .cert:last-child {
+    height: 370px;
+  }
+
+  .award {
+    min-width: 330px;
+  }
+
+  .award .award_title {
+    padding-bottom: 10px;
+  }
+
+  .award .award_title:nth-child(4) {
+    margin-top: 15px;
+  }
+
+  .award_text_1 {
+    font-size: 12px;
+  }
+
+  .award_text_2 {
+    font-size: 10px;
+  }
+
+  .skill_list {
+    
+  }
+
+  .skill .skill_list {
+    flex-wrap: wrap;
+    width: auto;
+  }
+
+  .work {
+    margin-top: 0px;
+  }
+
+  .work .port_main {
+    /* flex-direction: column; */
+  }
+
+  .work .port_main .port_info .port_top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work .port_main .port_info .port_top > span {
+    /* display: block; */
+  }
+
+  .work .port_main .port_info .port_top .port_img {
+    width: 95%;
+  }
+
+  .work .port_main .port_info .port_top .port_text {
+    width: 100%;
+    padding: 35px;
+    margin-left: -20px;
+  }
+
+  .work .port_main .port_info .port_top .port_text .port_text_head {
+    padding-bottom: 0px;
+  }
+
+  .work .port_main .port_info .port_top .port_text_sub {
+    padding: 0 25px;
+    text-align: justify;
+    font-size: 14px;
+    letter-spacing: -0.8px;
+  }
+
+  .work .port_main .port_info .port_top .port_text_sub > span {
+    display: block;
+  }
+
+  .work .port_main .port_info .port_top .port_text > span {
+    display: none;
+  }
+
+  .btn-group {
+    top: auto;
+    bottom: 30px;
+  }
+
+  .slideshow-container {
+    width: 95%;
+  }
+
+  .contact .center {
+    width: auto;
+  }
+
+}
+
+/* 반응형 */
+@media screen and (max-width: 767px) {
+
+  .visual video {
+    height: 500px;
+  }
+
+  .visual .video-gra {
+    top: 300px;
+  }
+
+  .about {
+    margin-top: 570px;
+  }
+
+  .about .about_warpper {
+    flex-direction: column;
+  }
+
+  .about .about_warpper .about_img {
+    width: 60%;
+  }
+
+  .about .about_warpper .about_text .slogan {
+    margin-top: 30px;
+  }
+
+  .about .about_warpper .about_text .btn-info {
+    top: 30px;
+  }
+
+  .about .about_warpper .about_text {
+    width: 100%;
+  }
+
+  .about .about_btn {
+    right: 30px;
+  }
+
+  .about .my_how .int_text {
+    font-size: 17px;
+  }
+
+  .work .port_main .port_info .port_top .port_img {
+    width: 95%;
+  }
+
+  .work .port_main .port_info .port_top .port_text {
+    margin-left: 0px;
+  }
+
+  .work .port_main .port_info .port_top .port_text .port_text_head {
+    text-align: center;
+  }
+
+  .btn-group {
+    position: relative;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .work .port_main .port_info .port_top .port_text_sub {
+    padding: 0 10px;
+  }
+
+  #modal-about .modal_center .cert_award {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .certificate {
+    padding-bottom: 30px;
+  }
+
+  .certificate .cert:first-child {
+    height: 10px;
+  }
+
+  .certificate .cert:last-child {
+    height: 260px;
+    padding-bottom: 20px;
+  }
+
+  .certificate .cert .cert_visual {
+    margin-top: -70px;
+  }
+  
+  .certificate .cert .cert_visual > video {
+    width: 33%;
+  }
+
+  .certificate .cert .cert_gr {
+    padding-top: 75px;
+  }
+
+  .certificate .cert .cert_gr .cert_info .cert_title {
+    font-size: 20px;
+  }
+
+  .certificate .cert .cert_gr .cert_info .cert_sub {
+    font-size: 12px;
+  }
+
+  .award .award_title {
+    font-size: 16px;
+  }
+
+  .award_text_2 {
+    display: none;
+  }
+
+  .award_text_1 > br {
+    display: none;
+  }
+
+  .award .award_list tr {
+    height: 30px
+  }
+
+  ul.menu-list {
+    /* justify-content: center; */
+    display: none;
+  }
+
 }
